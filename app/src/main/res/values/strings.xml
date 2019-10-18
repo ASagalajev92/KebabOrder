@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Kebab Order</string>
+    <string name="logo_description">KebabBar logo</string>
+    <string name="welcome">WELCOME</string>
+    <string name="hint_name">Enter Your name</string>
+    <string name="hint_password">Enter password</string>
+    <string name="button_get_order">GET ORDER</string>
+    <string name="toast_name">Please enter Your name</string>
+    <string name="toast_password">Please enter Your password</string>
+</resources>
