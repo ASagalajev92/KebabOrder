@@ -28,7 +28,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:textStyle="bold"
-        android:textColor="@color/white"/>
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/editText_name"
@@ -36,9 +36,9 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:hint="@string/hint_name"
-        android:textColorHint="@color/white"
+        android:textColorHint="@color/black"
         android:textStyle="bold"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:layout_margin="30dp"/>
 
     <EditText
@@ -46,9 +46,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/hint_password"
-        android:textColorHint="@color/white"
+        android:textColorHint="@color/black"
         android:textStyle="bold"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:layout_margin="30dp"
         android:password="true"/>
     <Button
@@ -58,6 +58,6 @@
         android:text="@string/button_get_order"
         android:textSize="24sp"
         android:background="@color/dark"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:onClick="onClickCreateOrder"/>
 </LinearLayout>

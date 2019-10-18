@@ -7,4 +7,16 @@
     <string name="button_get_order">GET ORDER</string>
     <string name="toast_name">Please enter Your name</string>
     <string name="toast_password">Please enter Your password</string>
+    
+    <string-array name="deliverersList">
+        <item>Bolt</item>
+        <item>Wolt</item>
+        <item>CityBee</item>
+        <item>CrazyCooler</item>
+    </string-array>
+
+    <string-array name="deliverersListFree">
+        <item>Free+Deliverers</item>
+        <item>GrandmothersHelpers</item>
+    </string-array>
 </resources>
