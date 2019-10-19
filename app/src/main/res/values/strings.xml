@@ -7,18 +7,20 @@
     <string name="button_get_order">GET ORDER</string>
     <string name="toast_name">Please enter Your name</string>
     <string name="toast_password">Please enter Your password</string>
-    <string name="delivery">Chose delivery...</string>
+    <string name="delivery">Chose delivery…</string>
     <string name="at_home">At home</string>
     <string name="at_our_place">On our place</string>
     <string name="eat_place">Where do You gonna eat ?</string>
     <string name="separately">Free pork separately</string>
     <string name="hot">Hot(Jalopeno)</string>
-    <string name="souse">Souse</string>
-    <string name="extras">Chose some extra options...</string>
+    <string name="sauсe">Sauсe</string>
+    <string name="extras">Shaurma extras…</string>
     <string name="free">Free +</string>
     <string name="dener">Dener</string>
     <string name="shaurma">Shaurma</string>
-    <string name="first_chose">Hi customer what do You order ?</string>
+    <string name="hello">Hi, %s ! What do You order ?</string>
+    <string name="default_name">Client</string>
+    <string name="default_password">123</string>
 
     <string-array name="deliverersList">
         <item>Bolt</item>

@@ -11,7 +11,7 @@
         android:id="@+id/textViewHi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/first_chose"
+        android:text="@string/hello"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,6 +41,8 @@
             android:layout_height="wrap_content"
             android:text="@string/shaurma"
             android:textColor="@color/black"
+            android:checked="true"
+            android:onClick="onClickChangeFood"
             />
 
         <RadioButton
@@ -49,6 +51,7 @@
             android:layout_height="wrap_content"
             android:text="@string/dener"
             android:textColor="@color/black"
+            android:onClick="onClickChangeFood"
             />
 
         <RadioButton
@@ -57,6 +60,7 @@
             android:layout_height="wrap_content"
             android:text="@string/free"
             android:textColor="@color/black"
+            android:onClick="onClickChangeFood"
             />
 
     </RadioGroup>
@@ -77,10 +81,10 @@
         />
 
     <CheckBox
+        android:id="@+id/checkboxSauce"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/checkboxSouse"
-        android:text="@string/souse"
+        android:text="@string/sauсe"
         app:layout_constraintTop_toBottomOf="@+id/textViewEditions"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/checkboxHot"
@@ -93,7 +97,7 @@
         android:id="@+id/checkboxHot"
         android:text="@string/hot"
         app:layout_constraintTop_toBottomOf="@+id/textViewEditions"
-        app:layout_constraintStart_toEndOf="@+id/checkboxSouse"
+        app:layout_constraintStart_toEndOf="@+id/checkboxSauce"
         app:layout_constraintEnd_toStartOf="@+id/checkboxSeparately"
         android:textColor="@color/black"
         android:layout_margin="8dp"/>
@@ -206,6 +210,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerFreeDelivery"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="onClickSendOrder"
         />
 
 
