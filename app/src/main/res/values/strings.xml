@@ -9,18 +9,20 @@
     <string name="toast_password">Please enter Your password</string>
     <string name="delivery">Chose delivery…</string>
     <string name="at_home">At home</string>
-    <string name="at_our_place">On our place</string>
+    <string name="at_our_place">At our place</string>
     <string name="eat_place">Where do You gonna eat ?</string>
-    <string name="separately">Free pork separately</string>
-    <string name="hot">Hot(Jalopeno)</string>
+    <string name="separately">Fries separately</string>
+    <string name="hot">Hot(Jalapeno)</string>
     <string name="sauсe">Sauсe</string>
-    <string name="extras">Shaurma extras…</string>
+    <string name="extras">%s additions…</string>
     <string name="free">Free +</string>
     <string name="dener">Dener</string>
     <string name="shaurma">Shaurma</string>
-    <string name="hello">Hi, %s ! What do You order ?</string>
+    <string name="hello">Hi, %s! What do You order ?</string>
     <string name="default_name">Client</string>
     <string name="default_password">123</string>
+    <string name="order">Name: %s  Password: %s  Food: %s  Delivery: %s</string>
+    <string name="additions_added">Needed additions:</string>
 
     <string-array name="deliverersList">
         <item>Bolt</item>

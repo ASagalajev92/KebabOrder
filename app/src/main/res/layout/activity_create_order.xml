@@ -66,7 +66,7 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/textViewEditions"
+        android:id="@+id/textViewAdditions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/extras"
@@ -85,29 +85,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/sauсe"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEditions"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAdditions"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/checkboxHot"
         android:textColor="@color/black"
-        android:layout_margin="8dp"/>
+        android:layout_margin="8dp"
+        android:checked="true"/>
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/checkboxHot"
         android:text="@string/hot"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEditions"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAdditions"
         app:layout_constraintStart_toEndOf="@+id/checkboxSauce"
         app:layout_constraintEnd_toStartOf="@+id/checkboxSeparately"
         android:textColor="@color/black"
-        android:layout_margin="8dp"/>
+        android:layout_margin="8dp"
+        android:checked="false"/>
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/checkboxSeparately"
         android:text="@string/separately"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEditions"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAdditions"
         app:layout_constraintStart_toEndOf="@+id/checkboxHot"
         app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/black"
@@ -141,11 +143,13 @@
         >
 
         <RadioButton
-            android:id="@+id/radioButtonEatHere"
+            android:id="@+id/radioButtonOurPlace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/at_our_place"
             android:textColor="@color/black"
+            android:checked="true"
+            android:onClick="onClickChangeDelivery"
             />
 
         <RadioButton
@@ -154,6 +158,8 @@
             android:layout_height="wrap_content"
             android:text="@string/at_home"
             android:textColor="@color/black"
+            android:checked="false"
+            android:onClick="onClickChangeDelivery"
             />
 
     </RadioGroup>
@@ -171,6 +177,7 @@
         android:layout_marginTop="8dp"
         android:textColor="@color/black"
         android:gravity="center"
+        android:visibility="invisible"
         />
 
     <Spinner
@@ -178,7 +185,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/deliverersList"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintTop_toBottomOf="@+id/textViewDeliverer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -191,7 +198,7 @@
         android:id="@+id/spinnerFreeDelivery"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/deliverersList"
+        android:entries="@array/deliverersListFree"
         android:visibility="invisible"
         app:layout_constraintTop_toBottomOf="@+id/textViewDeliverer"
         app:layout_constraintStart_toStartOf="parent"
@@ -202,16 +209,15 @@
         />
 
     <ImageView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:id="@+id/send_order"
-        android:src="@drawable/order_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerFreeDelivery"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
         android:onClick="onClickSendOrder"
-        />
+        android:src="@drawable/order_button2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerFreeDelivery" />
 
 
 
