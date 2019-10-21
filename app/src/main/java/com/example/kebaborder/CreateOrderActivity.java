@@ -100,47 +100,53 @@ public class CreateOrderActivity extends AppCompatActivity {
             vTextViewDelivery.setVisibility(View.INVISIBLE);
             vSpinnerFree.setVisibility(View.INVISIBLE);
             vSpinnerMain.setVisibility(View.INVISIBLE);
-        } else if (id == R.id.radioButtonAtHome && id == R.id.radioButtonFree) {
-            vTextViewDelivery.setVisibility(View.VISIBLE);
-            vSpinnerFree.setVisibility(View.VISIBLE);
-            vSpinnerMain.setVisibility(View.INVISIBLE);
-        }
-        else if (id == R.id.radioButtonAtHome && id != R.id.radioButtonFree) {
+        } else if (id == R.id.radioButtonAtHome) {
             vTextViewDelivery.setVisibility(View.VISIBLE);
             vSpinnerFree.setVisibility(View.INVISIBLE);
             vSpinnerMain.setVisibility(View.VISIBLE);
+        } else if (id == R.id.radioButtonAtHome || id == R.id.radioButtonFree){
+            vTextViewDelivery.setVisibility(View.VISIBLE);
+            vSpinnerFree.setVisibility(View.VISIBLE);
+            vSpinnerMain.setVisibility(View.INVISIBLE);
         }
     }
 
     public void onClickSendOrder(View view) {
         vBuilderAdditions.setLength(0);
         if (vCheckBoxSauce.isChecked()) {
-            vBuilderAdditions.append(R.string.sauсe).append(" ");
+            vBuilderAdditions.append(getString(R.string.sauсe)).append(" \n");
         }
         if (vCheckBoxHot.isChecked()) {
-            vBuilderAdditions.append(R.string.hot).append(" ");
+            vBuilderAdditions.append(getString(R.string.hot)).append(" \n");
         }
         if (vCheckBoxSeparately.isChecked() && !food.equals(getString(R.string.free))) {
-            vBuilderAdditions.append(R.string.separately).append(" ");
+            vBuilderAdditions.append(getString(R.string.separately)).append(" \n");
         }
+
         String optionOfDelivery = "";
-        if (vRadioButtonHome.isChecked() && !vRadioButtonFree.isChecked()) {
-            optionOfDelivery = vSpinnerMain.getSelectedItem().toString();
+        if (vRadioButtonHome.isChecked() && vRadioButtonFree.isChecked()) {
+            optionOfDelivery = String.format(getString(R.string.delivery_option)) + vSpinnerFree.getSelectedItem().toString();
+        } else if (vRadioButtonHome.isChecked()) {
+            optionOfDelivery = String.format(getString(R.string.delivery_option)) + vSpinnerMain.getSelectedItem().toString();
         } else {
-            optionOfDelivery = vSpinnerFree.getSelectedItem().toString();
+            optionOfDelivery = String.format(getString(R.string.delivery_option)) + "NO DELIVERY!";
         }
-        String order = String.format(getString(R.string.order),name,password,food,optionOfDelivery);
-        String additions ;
+
+        String order = String.format(getString(R.string.order2),name,password,food);
+        String additions;
         if (vBuilderAdditions.length() > 0) {
             additions = getString(R.string.additions_added) + vBuilderAdditions.toString();
         } else {
             additions = "";
         }
-        String fullOrder = order + additions;
-        Intent intent = new Intent(this, OrderActivity.class);
+
+        String fullOrder = order + additions + optionOfDelivery;
+        Intent intent = new Intent(this, OrderDetailActivity.class);
         intent.putExtra("order", fullOrder);
+
         startActivity(intent);
     }
 
-
 }
+
+// && !vRadioButtonFree.isChecked()

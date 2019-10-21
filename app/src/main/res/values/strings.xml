@@ -21,8 +21,10 @@
     <string name="hello">Hi, %s! What do You order ?</string>
     <string name="default_name">Client</string>
     <string name="default_password">123</string>
-    <string name="order">Name: %s  Password: %s  Food: %s  Delivery: %s</string>
-    <string name="additions_added">Needed additions:</string>
+    <string name="additions_added">\nNeeded additions: \n</string>
+    <string name="textViewOrder">TextView</string>
+    <string name="order2">Name: %s\nPassword: %s\nFood: %s\n</string>
+    <string name="delivery_option">\nDelivery option : \n</string>
 
     <string-array name="deliverersList">
         <item>Bolt</item>
